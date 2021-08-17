@@ -74,7 +74,6 @@ def prange_ISD(H, t, s, verbose=False):
                 print("ISD finished after %d iterations of outer loop and an average of %d iterations of inner loop"
                       % (outer_iter_count, mean(inner_iter_counts)))
             
-            e_curr.reverse()
             return matrix(e_curr) * P.T
 
 
