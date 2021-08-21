@@ -1,0 +1,72 @@
+Runnig alg for syndrome weight 1
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 1 with an average of 18 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 2
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 2 with an average of 12 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 3
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 3 with an average of 9 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 4
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 4 with an average of 8 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 5
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 5 with an average of 8 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 6
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD returned correct result
+ISD ran for 10 iterations on weight 6 with an average of 9 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
