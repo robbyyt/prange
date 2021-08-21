@@ -1,0 +1,61 @@
+Runnig alg for syndrome weight 1
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 1 with an average of 88 outer loop runs and an average of 2 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 2
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 2 with an average of 52 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 3
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 3 with an average of 38 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 4
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 4 with an average of 29 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 5
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 5 with an average of 25 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 6
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 6 with an average of 21 outer loop runs and an average of 4 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 7
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 7 with an average of 19 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 8
+ISD returned correct result
+ISD returned correct result
+ISD ran for 2 iterations on weight 8 with an average of 17 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
+Runnig alg for syndrome weight 9
+Failed to find a solution!
+
+Syndrome:
+ [0]
+[0]
+[1]
+[1]
+[1]
+[0]
+[1]
+[1]
+[0]
+[0]
+Weight:
+ 9
+---------
+Maximum iterations exceeded in outer loop
+ISD returned correct result
+ISD ran for 2 iterations on weight 9 with an average of 17 outer loop runs and an average of 3 iterations of inner loop
+--------------------------------------------------------------
