@@ -75,13 +75,13 @@ def randvect(size=4):
 
 
 def test_prange(H, order):
-    for iter_alg in range(1):
+    for iter_alg in range(10):
         print("Iteration %d\n" % iter_alg)
         inner_it_avgs = []
         outer_its = []
         for curr_weight in range(1, order):
             print("Runnig alg for syndrome weight %d" % curr_weight)
-            for iter_per_weight in range(1, 3):
+            for iter_per_weight in range(10):
                 syndrome = matrix(order, 1, randvect(order))
                 try:
                     e, outer_it_count, inner_it_avg = prange_ISD(
@@ -111,17 +111,25 @@ def test_prange(H, order):
 # PC = C.parity_check_matrix()
 
 # test_prange(PC, ORDER)
-F = GF(2 ^ 6)
 
-R.<x> = F[]
+# F = GF(2 ^ 6)
 
-g = x ^ 9  + 1
+# R.<x> = F[]
 
-L = [a for a in F.list() if g(a) != 0]
+# g = x ^ 9  + 1
 
-C = codes.GoppaCode(g, L)
-PC = Matrix(QQ, C.parity_check_matrix())
-print(" DIMENSIONS: ", PC.dimensions())
+# L = [a for a in F.list() if g(a) != 0]
+
+# C = codes.GoppaCode(g, L)
+# PC = Matrix(QQ, C.parity_check_matrix())
+# print(" DIMENSIONS: ", PC.dimensions())
+# ORDER = PC.dimensions()[0]
+
+
+C = codes.GolayCode(GF(2), extended = False)
+
+PC = C.parity_check_matrix()
+print(PC)
 ORDER = PC.dimensions()[0]
 
 test_prange(PC, ORDER)
