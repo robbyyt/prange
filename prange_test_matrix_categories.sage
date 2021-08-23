@@ -1,5 +1,5 @@
 MAX_ITERATIONS = 10_000
-
+f = open("C:\\Users\\Robbz\\Documents\\MASTER-IMPLEMENTATIONS\\prange\\results\\hamming_order5", "a+")
 
 def generateRandomPermutationMatrix(n):
     return Permutations(n).random_element().to_matrix()
@@ -28,11 +28,6 @@ def prange_inner_loop(H):
         RRE = H_curr.rref()
         U = RRE[:, n:n+r]
         V = RRE[:, r:n]
-        W = RRE[:, 0:r]
-        # print("Inner loop Iteration: %d\n" % (iteration_count + 1))
-        # print("W:\n", W, '\n-----')
-        # print("U:\n", U, '\n-----')
-        # print("V:\n", V, '\n-----')
         iteration_count += 1
         if W == identity_matrix(r):
             return P, V, U, iteration_count
@@ -61,7 +56,7 @@ def prange_ISD(H, t, s, verbose=False):
 
         if is_of_desired_weight(e_curr, t):
             if verbose:
-                print("ISD finished after %d iterations of outer loop and an average of %d iterations of inner loop"
+                f.write("ISD finished after %d iterations of outer loop and an average of %d iterations of inner loop\n"
                       % (outer_iter_count, mean(inner_iter_counts)))
 
             return matrix(e_curr) * P.T, outer_iter_count, mean(inner_iter_counts)
@@ -76,11 +71,11 @@ def randvect(size=4):
 
 def test_prange(H, order):
     for iter_alg in range(10):
-        print("Iteration %d\n" % iter_alg)
+        f.write("Iteration %d\n" % iter_alg)
         inner_it_avgs = []
         outer_its = []
         for curr_weight in range(1, order):
-            print("Runnig alg for syndrome weight %d" % curr_weight)
+            f.write("Runnig alg for syndrome weight %d\n" % curr_weight)
             for iter_per_weight in range(10):
                 syndrome = matrix(order, 1, randvect(order))
                 try:
@@ -88,27 +83,26 @@ def test_prange(H, order):
                         H, curr_weight, syndrome)
                 except Exception as err:
 
-                    print("Failed to find a solution!\n")
-                    print("Syndrome:\n", syndrome)
-                    print("Weight:\n", curr_weight)
-                    print("---------")
+                    f.write("Failed to find a solution!\n")
+                    f.write("Weight:\n %d" % curr_weight)
+                    f.write("---------\n")
                     continue
 
                 if H * e.transpose() == syndrome:
-                    print("ISD returned correct result")
+                    f.write("ISD returned correct result\n")
                     inner_it_avgs.append(inner_it_avg)
                     outer_its.append(outer_it_count)
             try:
-                print("ISD ran for 2 iterations on weight %d with an average of %d outer loop runs and an average of %d iterations of inner loop"
+                f.write("ISD ran for 2 iterations on weight %d with an average of %d outer loop runs and an average of %d iterations of inner loop\n"
                   % (curr_weight, mean(outer_its), mean(inner_it_avgs)))
-                print("--------------------------------------------------------------")
+                f.write("--------------------------------------------------------------\n")
             except:
-                print("Could not print statistics!")
+                f.write("Could not print statistics!\n")
 
 
-# ORDER = 10
-# C = codes.HammingCode(GF(2), ORDER)
-# PC = C.parity_check_matrix()
+ORDER = 5
+C = codes.HammingCode(GF(2), ORDER)
+PC = C.parity_check_matrix()
 
 # test_prange(PC, ORDER)
 
@@ -122,14 +116,13 @@ def test_prange(H, order):
 
 # C = codes.GoppaCode(g, L)
 # PC = Matrix(QQ, C.parity_check_matrix())
-# print(" DIMENSIONS: ", PC.dimensions())
+# f.write(" DIMENSIONS: ", PC.dimensions())
 # ORDER = PC.dimensions()[0]
 
 
-C = codes.GolayCode(GF(2), extended = False)
-
-PC = C.parity_check_matrix()
-print(PC)
-ORDER = PC.dimensions()[0]
+# C = codes.GolayCode(GF(2), extended = False)
+# PC = C.parity_check_matrix()
+# ORDER = PC.dimensions()[0]
 
 test_prange(PC, ORDER)
+f.close()
